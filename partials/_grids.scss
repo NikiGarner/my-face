@@ -1,0 +1,94 @@
+
+$light-green:#61C280;
+$logo-font: 'EB Garamond', serif;
+$title-font: 'Oswald', sans-serif;
+
+
+
+$li-display: inline;
+
+
+#wrap {
+  @include outer-container();
+  background-color: #e9ebee;
+  border: 5px solid black;
+}
+
+#nav {
+  @include span-columns(12);
+  h1 {
+    font: $title-font;
+    font-size: 3em;
+    padding-left: 100px;
+    margin-bottom: 0;
+  }
+  li{
+    display:$li-display;
+    float:right;
+    padding: 20px;
+  }
+  a {
+    text-decoration: none;
+  }
+  background-color:$light-green;
+  border-radius: 2px;
+  font: 100% $title-font;
+}
+
+#content{
+  @include span-columns(10 of 12);
+  #header{
+    @include span-columns(10);
+    height: 25vh;
+    background: url('../img/plato.jpg');
+    border-radius: 15px;
+    h2{
+      float: left;
+      padding-left: 10px;
+      color: white;
+      font: $title-font;
+      margin-top: 270px;
+    }
+    #nav2{
+      display:block;
+      background: white;
+      margin: 20px;
+      margin-top: 270px;
+    }
+    li{
+      display:$li-display;
+      border-right: 1px solid white;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: 10px;
+      float: right;
+    }
+    a {
+        font: $title-font;
+        text-decoration: none;
+        color: white;
+        &:hover {
+          color: black;
+        }
+    }
+    img{
+      width:100%;
+    }
+    float:right;
+  }
+
+  #col1{
+    @include span-columns(7);
+    border: 5px solid green;
+    float:right;
+    img{
+      width:100%;
+    }
+
+  }
+  #col2{
+    @include span-columns(3);
+    border: 5px solid green;
+    float:right;
+  }
+}

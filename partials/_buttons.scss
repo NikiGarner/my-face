@@ -1,0 +1,5 @@
+$light-blue: #2485F1;
+
+.super-duper-button {
+     @include button($light-blue);
+ }
